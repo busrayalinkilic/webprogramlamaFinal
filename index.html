@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Shop Homepage - Start Bootstrap Template</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/shop-homepage.css" rel="stylesheet">
+
+<script src="jquery-1.11.1.min.js"></script>
+</head>
+
+<body>
+
+
+  <!-- Page Content -->
+  <div class="container">
+
+    <div class="row">
+      <div class="offset-md-5 col-md-2">
+	  <img src="bm.png">
+      </div>
+      </div>
+    <div class="bd-example">
+	<h2><p class="text-center">ERCİYES ÜNİVERSİTESİ BİLGİSAYAR MÜHENDİSLİĞİ BÖLÜMÜ WEB PROGRAMLAMA 1 DERSİ FİNAL SORUSU</p></h2>
+	</div>
+    <div class="bd-example">
+	<h3><p class="text-center">Dr. Öğr. Üyesi Fehim KÖYLÜ</p></h3>
+	</div>
+    <div class="bd-example">
+	<h1><p class="text-center">Alışveriş Uygulaması</p></h1>
+	</div>
+    <div class="bd-example">
+	<p class="text-center">Vermek istediğiniz siparişler için aşağıdaki listeden seçerek adedini belirtiniz.</p>
+      </div>
+    <div class="row">
+
+      <!-- /.col-lg-3 -->
+
+      <div class="col-lg-12">
+
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card h-100">
+              <div class="card-footer" style="height: 40px;">
+				<div class="bd-example">
+					<p class="text-center">Ekmek</p>
+				</div>
+              </div>
+			  
+				<div class="bd-example">
+					<h3 ><p class="text-center"> <span id="ekmekfiyat">2</span>₺  <span style="color:grey;">/ adet</span></p></h5>
+				</div>
+				<div class="bd-example">
+					<p class="text-center"> Somun Ekmek </p>
+				</div>
+				<div class="bd-example" style="margin-top: -10px;">
+					<p class="text-center"> 200gr </p>
+				</div>
+				<div class="bd-example" style="margin-top: -10px;padding: 10px;">
+					<a class="btn btn-primary col-md-12"  onclick="SepeteEkle(1)">Sepete Ekle</a> 
+				</div>
+            </div>
+            </div>
+			 <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card h-100">
+              <div class="card-footer" style="height: 40px;">
+				<div class="bd-example">
+					<p class="text-center">Çikolata</p>
+				</div>
+              </div>
+			  
+				<div class="bd-example">
+					<h3 ><p class="text-center"> <span id="cikolatafiyat">5</span>₺  <span style="color:grey;">/ adet</span></p></h5>
+				</div>
+				<div class="bd-example">
+					<p class="text-center"> Bitter Çikolata </p>
+				</div>
+				<div class="bd-example" style="margin-top: -10px;">
+					<p class="text-center"> 60gr </p>
+				</div>
+				<div class="bd-example" style="margin-top: -10px;padding: 10px;">
+					<a class="btn btn-primary col-md-12"  onclick="SepeteEkle(2)">Sepete Ekle</a> 
+				</div>
+            </div>
+            </div>
+			 <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card h-100">
+              <div class="card-footer" style="height: 40px;">
+				<div class="bd-example">
+					<p class="text-center">Domates</p>
+				</div>
+              </div>
+			  
+				<div class="bd-example">
+					<h3 ><p class="text-center"> <span id="domatesfiyat">6</span>₺  <span style="color:grey;">/ adet</span></p></h5>
+				</div>
+				<div class="bd-example">
+					<p class="text-center"> Domates </p>
+				</div>
+				<div class="bd-example" style="margin-top: -10px;">
+					<p class="text-center"> Antalya Sera </p>
+				</div>
+				<div class="bd-example" style="margin-top: -10px;padding: 10px;">
+					<a class="btn btn-primary col-md-12" onclick="SepeteEkle(3)">Sepete Ekle</a> 
+				</div>
+            </div>
+            </div>
+          </div>
+
+        </div>
+        <!-- /.row -->
+
+      </div>
+      <!-- /.col-lg-9 -->
+      <div class="col-lg-3">
+<div class="row">
+      <div class="col-md-8">
+        <h3 class="my-4" style="color:grey">Siparişleriniz</h1>
+</div>
+      <div class="col-md-3">
+	   <h3 class="my-4" style="background-color: grey; padding-left: 13px; border-radius: 24px;color:white;"><span id="lbltoplamadet">0</span></h1>
+</div>
+</div>
+<div class="row" style="    border: 1px solid #cccc;visibility: hidden;" id="pnlekmek">
+      <div class="col-md-8">Somun Ekmek(<span id="ekmekadet">0</span>) </div><div class="col-md-4"><span id="ekmekToplam">0</span> ₺ <a class="" onclick="SepeteSil(1)">Sil</a> </div>
+</div>
+<div class="row" style="    border: 1px solid #cccc;visibility: hidden;"  id="pnlcikolata" >
+	   <div class="col-md-8">Çikolata (<span id="cikolataadet">0</span>) </div><div class="col-md-4"> <span id="cikolataToplam">0</span>₺ <a class="" onclick="SepeteSil(2)">Sil</a> </div>
+</div>
+<div class="row" style="    border: 1px solid #cccc;visibility: hidden;" id="pnldomates" >
+	    <div class="col-md-8">Domates (<span id="domatesadet">0</span>) </div><div class="col-md-4"> <span id="domatesToplam">0</span>₺  <a class="" onclick="SepeteSil(3)">Sil</a></div>
+</div>
+<div class="row" style="    border: 1px solid #cccc;">
+		 <div class="col-md-8">İndirim Kodu </div><div class="col-md-4"> <span id="indirim">1</span>₺ </div>
+</div>
+<div class="row" style="    border: 1px solid #cccc;">
+		  <div class="col-md-8">Toplam Ücret</div><div class="col-md-4"> <span id="toplam">0</span>₺ </div>
+		 
+</div>
+
+      </div>
+
+    </div>
+    <!-- /.row -->
+
+  </div>
+  <!-- /.container -->
+<script>
+ function SepeteEkle(urun) {
+        if (urun==1) {
+            document.getElementById('ekmekadet').innerHTML = parseInt(document.getElementById('ekmekadet').innerHTML)+1;
+			document.getElementById('ekmekToplam').innerHTML=parseInt(document.getElementById('ekmekfiyat').innerHTML)* parseInt(document.getElementById('ekmekadet').innerHTML);
+        }
+        else if (urun==2){
+            document.getElementById('cikolataadet').innerHTML = parseInt(document.getElementById('cikolataadet').innerHTML)+1;
+			document.getElementById('cikolataToplam').innerHTML=parseInt(document.getElementById('cikolatafiyat').innerHTML)* parseInt(document.getElementById('cikolataadet').innerHTML);
+        }
+        else if (urun==3){
+            document.getElementById('domatesadet').innerHTML = parseInt(document.getElementById('domatesadet').innerHTML)+1;
+			document.getElementById('domatesToplam').innerHTML=parseInt(document.getElementById('domatesfiyat').innerHTML)* parseInt(document.getElementById('domatesadet').innerHTML);
+        }
+		
+		
+		document.getElementById('toplam').innerHTML=parseInt(document.getElementById('cikolataToplam').innerHTML)+parseInt(document.getElementById('ekmekToplam').innerHTML)+
+		parseInt(document.getElementById('domatesToplam').innerHTML)-parseInt(document.getElementById('indirim').innerHTML);
+		
+		document.getElementById('lbltoplamadet').innerHTML=parseInt(document.getElementById('cikolataadet').innerHTML)+parseInt(document.getElementById('domatesadet').innerHTML)+
+		parseInt(document.getElementById('ekmekadet').innerHTML)
+		if(parseInt(document.getElementById('ekmekadet').innerHTML)>0)
+		{document.getElementById("pnlekmek").style.visibility = "visible";
+		}
+		else
+		{
+		document.getElementById("pnlekmek").style.visibility = "hidden";
+		}
+		if(parseInt(document.getElementById('cikolataadet').innerHTML)>0)
+		{document.getElementById("pnlcikolata").style.visibility = "visible";
+		}
+		else
+		{
+		document.getElementById("pnlcikolata").style.visibility = "hidden";
+		}
+		if(parseInt(document.getElementById('domatesadet').innerHTML)>0)
+		{document.getElementById("pnldomates").style.visibility = "visible";
+		}
+		else
+		{
+		document.getElementById("pnldomates").style.visibility = "hidden";
+		}
+    }
+	
+ function SepeteSil(urun) {
+        if (urun==1) {
+		if(parseInt(document.getElementById('ekmekadet').innerHTML)!=0)
+		{
+            document.getElementById('ekmekadet').innerHTML = parseInt(document.getElementById('ekmekadet').innerHTML)-1;
+			document.getElementById('ekmekToplam').innerHTML=parseInt(document.getElementById('ekmekfiyat').innerHTML)* parseInt(document.getElementById('ekmekadet').innerHTML);
+			}
+        }
+        else if (urun==2){
+		if(parseInt(document.getElementById('cikolataadet').innerHTML)!=0)
+		{
+            document.getElementById('cikolataadet').innerHTML = parseInt(document.getElementById('cikolataadet').innerHTML)-1;
+			document.getElementById('cikolataToplam').innerHTML=parseInt(document.getElementById('cikolatafiyat').innerHTML)* parseInt(document.getElementById('cikolataadet').innerHTML);
+        }}
+        else if (urun==3){
+		if(parseInt(document.getElementById('domatesadet').innerHTML)!=0)
+		{
+            document.getElementById('domatesadet').innerHTML = parseInt(document.getElementById('domatesadet').innerHTML)-1;
+			document.getElementById('domatesToplam').innerHTML=parseInt(document.getElementById('domatesfiyat').innerHTML)* parseInt(document.getElementById('domatesadet').innerHTML);
+        } }
+		
+		document.getElementById('toplam').innerHTML=parseInt(document.getElementById('cikolataToplam').innerHTML)+parseInt(document.getElementById('ekmekToplam').innerHTML)+
+		parseInt(document.getElementById('domatesToplam').innerHTML)-parseInt(document.getElementById('indirim').innerHTML);
+		document.getElementById('lbltoplamadet').innerHTML=parseInt(document.getElementById('cikolataadet').innerHTML)+parseInt(document.getElementById('domatesadet').innerHTML)+
+		parseInt(document.getElementById('ekmekadet').innerHTML)
+		
+		if(parseInt(document.getElementById('ekmekadet').innerHTML)>0)
+		{document.getElementById("pnlekmek").style.visibility = "visible";
+		}
+		else
+		{
+		document.getElementById("pnlekmek").style.visibility = "hidden";
+		}
+		if(parseInt(document.getElementById('cikolataadet').innerHTML)>0)
+		{document.getElementById("pnlcikolata").style.visibility = "visible";
+		}
+		else
+		{
+		document.getElementById("pnlcikolata").style.visibility = "hidden";
+		}
+		if(parseInt(document.getElementById('domatesadet').innerHTML)>0)
+		{document.getElementById("pnldomates").style.visibility = "visible";
+		}
+		else
+		{
+		document.getElementById("pnldomates").style.visibility = "hidden";
+		}
+    }
+</script>
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; Your Website 2020</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
